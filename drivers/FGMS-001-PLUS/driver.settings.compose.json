@@ -477,7 +477,7 @@
       },
       {
         "id": "illumination_report_interval",
-        "value": 0,
+        "value": 3600,
         "label": {
           "en": "Illuminance report interval (seconds)",
           "nl": "Lichtsterkte rapportage interval (seconden)"
