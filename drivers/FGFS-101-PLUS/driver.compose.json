@@ -1,8 +1,8 @@
 {
   "id": "FGFS-101-PLUS",
   "name": {
-    "en": "Flood sensor (Z-Wave plus)",
-    "nl": "Overstromingssensor (Z-Wave plus)"
+    "en": "Flood sensor (Z-Wave Plus)",
+    "nl": "Overstromingssensor (Z-Wave Plus)"
   },
   "class": "sensor",
   "capabilities": [
@@ -12,8 +12,8 @@
     "alarm_water"
   ],
   "images": {
-    "large": "/{{driverPath}}/assets/images/large.png",
-    "small": "/{{driverPath}}/assets/images/small.png"
+    "large": "/{{driverAssetsPath}}/images/large.png",
+    "small": "/{{driverAssetsPath}}/images/small.png"
   },
   "zwave": {
     "manufacturerId": 271,
@@ -28,15 +28,14 @@
     "zwaveAllianceProductId": 2791,
     "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2791/FGFS-101-EN-T-v2.1.pdf",
     "learnmode": {
-      "image": "/{{driverPath}}/assets/learnmode.svg",
+      "image": "/{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
-        "en": "Press the button on your Fibaro flood sensor three times",
-        "nl": "Druk driemaal op de knop op de Fibaro overstromingssensor"
+        "en": "Press the button on your Fibaro flood sensor three times.",
+        "nl": "Druk driemaal op de knop op de Fibaro overstromingssensor."
       }
     },
     "associationGroups": [
-      1,
-      2
+      1
     ],
     "associationGroupsOptions": {
       "1": {

@@ -15,8 +15,8 @@
           "nl": "Vloedsensor"
         },
         "hint": {
-          "en": "Enable or disable the {{driverNameEn}}",
-          "nl": "Zet de {{driverNameNl}} Aan of Uit"
+          "en": "This parameter (77) enables/disables flood detection",
+          "nl": "Deze parameter (77) schakelt de overstromingssensor in/uit"
         },
         "zwave": {
           "index": 77,
@@ -32,8 +32,8 @@
           "nl": "Overstroming signaal"
         },
         "hint": {
-          "en": "Parameter allows for LED indicator and acoustic alarm deactivation in case of flooding detection.",
-          "nl": "Deze parameter bepaalt welke visuele en akoestische alarmen af gaan bij de detectie van water."
+          "en": "This parameter (2) enables/disables the visual and acoustic alarms in case of flood detection",
+          "nl": "Deze parameter (2) schakelt de visuele en akoestische alarmen in/uit in het geval van overstroming."
         },
         "zwave": {
           "index": 2,
@@ -64,8 +64,8 @@
           {
             "id": "3",
             "label": {
-              "en": "Acoustic and Visual",
-              "nl": "Akoestisch en Visueel"
+              "en": "Acoustic and visual",
+              "nl": "Akoestisch en visueel"
             }
           }
         ],
@@ -75,12 +75,12 @@
         "id": "alarm_duration",
         "value": 0,
         "label": {
-          "en": "Visual and acoustic alarm duration (seconds)",
-          "nl": "Visueel en akoestisch alarm duratie (seconden)"
+          "en": "Visual and acoustic alarm duration (s)",
+          "nl": "Duur van het visueel en akoestisch alarm (s)"
         },
         "hint": {
-          "en": "Sets the time after how many seconds the alarm becomes silent.",
-          "nl": "Zet de tijd na hoeveel seconden het alarm stil word."
+          "en": "This parameter (75) determines the time after which the visual and acoustic alarms will cancel.",
+          "nl": "Deze parameter (75) bepaald de tijd waarna de visuele en akoestische alarmen uitgaan."
         },
         "zwave": {
           "index": 75,
@@ -96,12 +96,12 @@
         "id": "alarm_cancellation_delay",
         "value": 0,
         "label": {
-          "en": "Alarm cancellation delay (seconds)",
-          "nl": "Vertraging voor annuleering alarm (seconden)"
+          "en": "Alarm cancellation delay (s)",
+          "nl": "Vertraging voor annuleering alarm (s)"
         },
         "hint": {
-          "en": "Flood alarm cancellation delay.",
-          "nl": "Vertraging voor het annuleren van het overspoelingsalarm."
+          "en": "This parameter (1) determines the time after which the alarm will cancel.",
+          "nl": "Deze parameter (1) bepaald de tijd waarna het overstromingsalarm geannuleerd wordt."
         },
         "zwave": {
           "index": 1,
@@ -120,8 +120,8 @@
           "nl": "Sabotage alarm"
         },
         "hint": {
-          "en": "Choose the way tamper alarm is being send",
-          "nl": "Kies de manier waarop het sabotage alarm word verzonden"
+          "en": "This parameter (74) determines when the tamper alarm is raised.",
+          "nl": "Deze parameter (74) bepaald wanneer het sabotage alarm afgaat."
         },
         "zwave": {
           "index": 74,
@@ -174,12 +174,12 @@
         "id": "temperature_measure_interval",
         "value": 300,
         "label": {
-          "en": "Temperature measurement interval (seconds)",
-          "nl": "Interval voor het meten van de temperatuur (seconden)"
+          "en": "Temperature measurement interval (s)",
+          "nl": "Interval voor het meten van de temperatuur (s)"
         },
         "hint": {
-          "en": "Time interval (in seconds) between consecutive measurements of temperature.",
-          "nl": "Tijd tussen temperatuursmetingen (in seconden)."
+          "en": "This parameter (10) determines the time between consecutive temperature measurements.",
+          "nl": "Deze parameter (10) bepaald de tijd tussen opeenvolgende temperatuursmetingen."
         },
         "zwave": {
           "index": 10,
@@ -193,14 +193,14 @@
       },
       {
         "id": "temperature_measure_hysteresis",
-        "value": 50,
+        "value": 5,
         "label": {
-          "en": "Temperature measurement hysteresis",
-          "nl": "Minimaal temperatuursverschil voor temperatuursmetingen"
+          "en": "Temperature measurement hysteresis (°C)",
+          "nl": "Minimaal temperatuursverschil voor temperatuursmetingen (°C)"
         },
         "hint": {
-          "en": "Determines a minimum temperature change in order for a report to be sent to Homey (°C)",
-          "nl": "Bepaal het mimimale temperatuursverschil voordat er wordt gerapporteerd naar Homey (°C)"
+          "en": "This parameter (12) etermines a minimum temperature change in order for a report to be sent to Homey.",
+          "nl": "Deze parameter (12) bepaald het mimimale temperatuursverschil voordat er wordt gerapporteerd naar Homey."
         },
         "zwave": {
           "index": 12,
@@ -208,7 +208,8 @@
         },
         "attr": {
           "min": 1,
-          "max": 100
+          "max": 100,
+          "steps": 0.1
         },
         "type": "number"
       },
@@ -216,12 +217,12 @@
         "id": "temperature_measure_offset",
         "value": 0,
         "label": {
-          "en": "Default offset for all temperature measurements (°C)",
-          "nl": "Standaard aanpassing van temperatuursmetingen (°C)"
+          "en": "Temperature calibration (°C)",
+          "nl": "Temperatuur kalibratie (°C)"
         },
         "hint": {
-          "en": "Value added or deducted from each temperature measurement.",
-          "nl": "Waarde die standaard wordt toegevoegd of afgetrokken van alle temperatuursmetingen."
+          "en": "This parameter (73) determines the value added from each temperature measurement.",
+          "nl": "Deze parameter (73) bepaald de waarde die standaard bij alle temperatuursmetingen wordt opgeteld."
         },
         "zwave": {
           "index": 73,
@@ -229,20 +230,21 @@
         },
         "attr": {
           "min": -100,
-          "max": 100
+          "max": 100,
+          "steps": 0.1
         },
         "type": "number"
       },
       {
         "id": "low_temperature_threshold",
-        "value": 1500,
+        "value": 15,
         "label": {
           "en": "Low temperature alarm threshold (°C)",
           "nl": "Limiet voor het lage temperatuursalarm (°C)"
         },
         "hint": {
-          "en": "Below this temperature a blue light will start flickering on your flood sensor.",
-          "nl": "Onder deze temperatuur gaat er een blauw lampje knipperen op uw overstromingssensor."
+          "en": "This parameter (50) determines the threshold for the low temperature alarm.",
+          "nl": "Deze parameter (50) bepaald de drempel voor het lage temperatuursalarm."
         },
         "zwave": {
           "index": 50,
@@ -250,20 +252,21 @@
         },
         "attr": {
           "min": -100,
-          "max": 100
+          "max": 100,
+          "steps": 0.1
         },
         "type": "number"
       },
       {
         "id": "high_temperature_threshold",
-        "value": 3500,
+        "value": 35,
         "label": {
           "en": "High temperature alarm threshold (°C)",
           "nl": "Limiet voor het hoge temperatuursalarm (°C)"
         },
         "hint": {
-          "en": "Above this temperature a red light will start flickering on your flood sensor.",
-          "nl": "Boven deze temperatuur gaat er een rood lampje knipperen op uw overstromingssensor."
+          "en": "This parameter (50) determines the threshold for the high temperature alarm.",
+          "nl": "Deze parameter (50) bepaald de drempel voor het hoge temperatuursalarm."
         },
         "zwave": {
           "index": 51,
@@ -271,7 +274,8 @@
         },
         "attr": {
           "min": -100,
-          "max": 100
+          "max": 100,
+          "steps": 0.1
         },
         "type": "number"
       },
@@ -282,8 +286,8 @@
           "nl": "Lage temperatuur alarm indicatie kleur"
         },
         "hint": {
-          "en": "This parameter defines the colour of the LED when the low temperature alarm is triggered",
-          "nl": "Deze parameter bepaalt de kleur van de LED bij het alarm voor te lage temperatuur"
+          "en": "This parameter (61) defines the colour of the LED when the low temperature alarm is triggered",
+          "nl": "Deze parameter (61) bepaalt de kleur van de LED bij het alarm voor te lage temperatuur"
         },
         "value": "255",
         "values": [
@@ -357,8 +361,8 @@
           "nl": "Hoge temperatuur alarm indicatie kleur"
         },
         "hint": {
-          "en": "This parameter defines the colour of the LED when the high temperature alarm is triggered",
-          "nl": "Deze parameter bepaalt de kleur van de LED bij het alarm voor te hoge temperatuur"
+          "en": "This parameter (62) defines the colour of the LED when the high temperature alarm is triggered",
+          "nl": "Deze parameter (62) bepaalt de kleur van de LED bij het alarm voor te hoge temperatuur"
         },
         "value": "16711680",
         "values": [
@@ -432,8 +436,8 @@
           "nl": "LED temperatuur weergave"
         },
         "hint": {
-          "en": "Choose if the LED indicates the temperature",
-          "nl": "Kies of de LED de temperatuur weergeeft"
+          "en": "This parameter (63) determines whether or not the LED indicates the temperature",
+          "nl": "Deze parameter (63) bepaald of de LED de temperatuur weergeeft"
         },
         "zwave": {
           "index": 63,
@@ -444,8 +448,8 @@
           {
             "id": "0",
             "label": {
-              "en": "LED doesn't Indicate",
-              "nl": "LED geeft niet Weer"
+              "en": "LED doesn't indicate",
+              "nl": "LED geeft niet weer"
             }
           },
           {
