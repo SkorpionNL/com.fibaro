@@ -2,16 +2,16 @@
 
 const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 
-class FibaroFloodSensorPlus extends ZwaveDevice {
+class FibaroFloodSensor extends ZwaveDevice {
 	
 	onMeshInit() {
-        this.registerCapability('alarm_water', 'NOTIFICATION');
-        this.registerCapability('alarm_tamper', 'NOTIFICATION');
+        this.registerCapability('alarm_water', 'SENSOR_ALARM');
+        this.registerCapability('alarm_tamper', 'SENSOR_ALARM');
         this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL', {
-        	getOpts: {
-        		getOnOnline: true,
-			}
-		});
+            getOpts: {
+                getOnOnline: true,
+            }
+        });
         this.registerCapability('measure_battery', 'BATTERY');
 
         this.setCapabilityValue('alarm_water', false);
@@ -23,9 +23,10 @@ class FibaroFloodSensorPlus extends ZwaveDevice {
 		=====================================================
 		*/
         this.registerSetting('flood_sensor');
+        this.registerSetting('alarm_cancel_status');
         this.registerSetting('flood_signal');
         this.registerSetting('alarm_duration');
-        this.registerSetting('alarm_cancellation_delay');
+        this.registerSetting('alarm_cancellation');
         this.registerSetting('tamper_alarm');
 
         /*
@@ -45,4 +46,4 @@ class FibaroFloodSensorPlus extends ZwaveDevice {
 	
 }
 
-module.exports = FibaroFloodSensorPlus;
+module.exports = FibaroFloodSensor;

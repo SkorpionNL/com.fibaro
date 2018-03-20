@@ -2,7 +2,7 @@
   "id": "FGFS-101-PLUS",
   "name": {
     "en": "Flood sensor (Z-Wave plus)",
-    "nl": "Flood overstromingssensor (Z-Wave plus)"
+    "nl": "Overstromingssensor (Z-Wave plus)"
   },
   "class": "sensor",
   "capabilities": [
