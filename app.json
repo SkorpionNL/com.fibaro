@@ -2776,14 +2776,14 @@
             },
             {
               "id": "illumination_report_interval",
-              "value": 3600,
+              "value": 0,
               "label": {
                 "en": "Report interval (s)",
                 "nl": "Rapportage interval (s)"
               },
               "hint": {
-                "en": "Determine the time between illumination reports to Homey, independent of value changes. Range: 0 (off) - 32767, default: 3600",
-                "nl": "Bepaal wanneer de lichtsterkte waarden naar Homey worden verzonden, ook als deze niet veranderd is. Bereik: 0 (uit) - 32676, standaard: 3600"
+                "en": "Determine the time between illumination reports to Homey, independent of value changes. Range: 0 (off) - 32767, default: 0",
+                "nl": "Bepaal wanneer de lichtsterkte waarden naar Homey worden verzonden, ook als deze niet veranderd is. Bereik: 0 (uit) - 32676, standaard: 0"
               },
               "zwave": {
                 "index": 42,
@@ -2889,7 +2889,7 @@
               "id": "tamper_operating_mode",
               "value": "0",
               "label": {
-                "en": "Temperature report interval (seconden)",
+                "en": "Temperature report interval (seconds)",
                 "nl": "Temperatuur rapportage interval (seconden)"
               },
               "hint": {
