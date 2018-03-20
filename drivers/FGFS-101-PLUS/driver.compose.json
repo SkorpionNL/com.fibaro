@@ -1,0 +1,50 @@
+{
+  "id": "FGFS-101-PLUS",
+  "name": {
+    "en": "Flood sensor (Z-Wave plus)",
+    "nl": "Flood overstromingssensor (Z-Wave plus)"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "alarm_tamper",
+    "measure_temperature",
+    "alarm_water"
+  ],
+  "images": {
+    "large": "/drivers/FGFS-101-PLUS/assets/images/large.png",
+    "small": "/drivers/FGFS-101-PLUS/assets/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 271,
+    "productTypeId": [
+      2817
+    ],
+    "productId": [
+      4098,
+      8194,
+      12290
+    ],
+    "zwaveAllianceProductId": 2791,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2791/FGFS-101-EN-T-v2.1.pdf",
+    "learnmode": {
+      "image": "/drivers/FGFS-101-PLUS/assets/learnmode.svg",
+      "instruction": {
+        "en": "Press the button on your Fibaro flood sensor three times",
+        "nl": "Druk driemaal op de knop op de Fibaro overstromingssensor"
+      }
+    },
+    "associationGroups": [
+      1,
+      2
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Reports the device status and allows for assigning single device only (Homey by default).",
+          "nl": "Rapporteert de status van het apparaat, er mag maar 1 apparaat in deze groep zitten (Standaard is dit Homey)"
+        }
+      }
+    }
+  }
+}
